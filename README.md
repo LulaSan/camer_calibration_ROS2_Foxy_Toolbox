@@ -1,3 +1,28 @@
+Camera Calibration Rolling but Foxy Compatible
+==============
+1. BUILD JUST THE CAMERA CALIBRATION PACKAGE 
+`colcon build --packages-select camera_calibration`
+2. Install [pyenv](https://github.com/pyenv/pyenv) in order to use Python 3.10
+   
+   2.1. `curl https://pyenv.run | bash `
+   
+   2.2.  nano ~/.bashrc
+   
+   2.3 Add the following lines at the end of the file:
+   ```bash
+
+   export PATH="$HOME/.pyenv/bin:$PATH"
+   eval "$(pyenv init --path)"
+   eval "$(pyenv init -)"
+   ```
+   2.4. `pyenv install 3.10.4`
+
+   2.5 `pyenv local 3.10.4`
+3. Follow the instruction for the camera calibration
+`ros2 run camera_calibration cameracalibrator ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.108 image:=/front/image camera:=/camera
+`
+
+
 image_pipeline
 ==============
 
